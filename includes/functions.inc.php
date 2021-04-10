@@ -95,6 +95,7 @@ function  loginUser($conn, $username, $pwd) {
     $pwdHashed = $usernameExists["usersPwd"];
     $chcekPwd = password_verify($pwd, $pwdHashed);
 
+    
     if($chcekPwd === false){
     header("location: ../login.php?error=wrongLogin");
     exit();
